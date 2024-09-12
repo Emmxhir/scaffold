@@ -1,12 +1,12 @@
 install:
-    pip install ~~upgrade pip &&\
-        pip install ~r requirement.txt
+    pip install --upgrade pip && \
+        pip install -r requirements.txt
 
 format:
     black *.py
 
 lint:
-    pylint ~~disable=R,C hello.py
+    pylint --disable=R,C hello.py
 
 test:
-    python ~m pytest ~~v ~~cov=hello test.hello.py
+    python -m pytest -v --cov=hello test_hello.py
